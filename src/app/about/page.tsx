@@ -43,7 +43,7 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-gray-900">A New Way to Learn Arabic</h2>
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Learning Arabic should be exciting, not exhausting. At <span className="font-bold">Hamd</span>, we've created a unique learning experience designed to keep you engaged, motivated, and progressing step by step. Whether you're a beginner or someone looking to refine your skills, we make Arabic learning <span className="font-bold">structured, enjoyable, and effective</span>.
+                  Learning Arabic should be exciting, not exhausting. At <span className="font-bold">Hamd</span>, we&apos;ve created a unique learning experience designed to keep you engaged, motivated, and progressing step by step. Whether you&apos;re a beginner or someone looking to refine your skills, we make Arabic learning <span className="font-bold">structured, enjoyable, and effective</span>.
                 </p>
               </motion.div>
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-gray-900">Our Story: Frustration Led to Innovation</h2>
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Hamd was born out of frustration. Too many Arabic courses focus on memorization without application, leaving students stuck in a cycle of forgetting what they've learned. We knew there had to be a better way. So, we set out to build a system that <span className="font-bold">guides you through Arabic like an adventure</span>, making learning feel like a journey rather than a task.
+                  Hamd was born out of frustration. Too many Arabic courses focus on memorization without application, leaving students stuck in a cycle of forgetting what they&apos;ve learned. We knew there had to be a better way. So, we set out to build a system that <span className="font-bold">guides you through Arabic like an adventure</span>, making learning feel like a journey rather than a task.
                 </p>
               </motion.div>
 
@@ -75,7 +75,7 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-gray-900">A Journey-Based Approach</h2>
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed mb-6">
-                  What if learning Arabic felt like leveling up in a game? That's the approach we took. With <span className="font-bold">70 structured lessons</span>, you progress step by step, unlocking new knowledge and reinforcing old lessons as you go. Our <span className="font-bold">Vocabulary Bank</span> ensures you never lose track of what you've learned, making retention effortless.
+                  What if learning Arabic felt like leveling up in a game? That&apos;s the approach we took. With <span className="font-bold">70 structured lessons</span>, you progress step by step, unlocking new knowledge and reinforcing old lessons as you go. Our <span className="font-bold">Vocabulary Bank</span> ensures you never lose track of what you&apos;ve learned, making retention effortless.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-8">
                   <div className="bg-cream-50 p-6 rounded-xl">
@@ -105,7 +105,7 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-gray-900">Our Mission: Make Arabic Learning Accessible and Engaging</h2>
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Our mission is simple: <span className="font-bold">to make Arabic learning engaging, structured, and accessible to everyone.</span> We believe that no one should struggle with disjointed resources or outdated methods. That's why we offer <span className="font-bold">the first 20 lessons and 5 extra lessons for free</span>, allowing you to experience our approach before making any commitment.
+                  Our mission is simple: <span className="font-bold">to make Arabic learning engaging, structured, and accessible to everyone.</span> We believe that no one should struggle with disjointed resources or outdated methods. That&apos;s why we offer <span className="font-bold">the first 20 lessons and 5 extra lessons for free</span>, allowing you to experience our approach before making any commitment.
                 </p>
               </motion.div>
 

@@ -59,7 +59,7 @@ export default function SignIn() {
           Welcome back
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <Link href="/auth/signup" className="font-medium text-gold-600 hover:text-gold-500">
             Sign up
           </Link>

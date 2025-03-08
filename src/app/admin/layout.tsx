@@ -60,7 +60,7 @@ export default function AdminLayout({
         <div className="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
           <h2 className="text-2xl font-bold mb-4 text-red-600">Access Denied</h2>
           <p className="text-gray-600 mb-4">
-            You don't have admin privileges.
+            You don&apos;t have admin privileges.
           </p>
           {error && (
             <div className="bg-red-50 border border-red-200 rounded p-4 mb-4">

@@ -92,7 +92,7 @@ export default function ChapterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-900">Chapter Not Found</h1>
-            <p className="mt-2 text-gray-600">The chapter you're looking for doesn't exist.</p>
+            <p className="mt-2 text-gray-600">The chapter you&apos;re looking for doesn&apos;t exist.</p>
             <Link 
               href="/dashboard/journey"
               className="mt-4 inline-flex items-center text-gold-600 hover:text-gold-700"
@@ -303,7 +303,7 @@ export default function ChapterPage() {
                           <CheckCircle2 className="w-8 h-8 text-green-500" />
                         </div>
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">Congratulations!</h3>
-                        <p className="text-gray-600 mb-6">You've successfully completed the quiz!</p>
+                        <p className="text-gray-600 mb-6">You&apos;ve successfully completed the quiz!</p>
                         <button
                           onClick={handleFinishChapter}
                           className="px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gold-600"
@@ -312,7 +312,7 @@ export default function ChapterPage() {
                         </button>
                       </>
                     ) : (
-                      <>
+                      <div className="text-center">
                         <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                           <XCircle className="w-8 h-8 text-red-500" />
                         </div>
@@ -324,7 +324,7 @@ export default function ChapterPage() {
                         >
                           Retry Quiz
                         </button>
-                      </>
+                      </div>
                     )}
                   </div>
                 ) : (
@@ -341,11 +341,11 @@ export default function ChapterPage() {
                           <button
                             key={key}
                             onClick={() => handleAnswerSelect(currentQuestion, key)}
-                            className={`w-full p-4 rounded-lg text-left transition-colors ${
-                              selectedAnswers[currentQuestion] === key
-                                ? 'bg-gold-500 text-white'
-                                : 'bg-cream-50 text-gray-900 hover:bg-cream-100'
-                            }`}
+                            className={"w-full p-4 rounded-lg text-left transition-colors " + 
+                              (selectedAnswers[currentQuestion] === key
+                                ? "bg-gold-500 text-white"
+                                : "bg-cream-50 text-gray-900 hover:bg-cream-100")
+                            }
                           >
                             {value}
                           </button>

@@ -54,10 +54,10 @@ export default function LandingPage() {
                 </div>
                 <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">Arabic, But Make It Addictive</h2>
                 <p className="text-xl text-gray-600 mb-6">
-                  Most language courses feel like a chore. <span className="font-bold">Hamd</span> is different. We've designed a <span className="font-bold">70-level journey</span> where each lesson builds on the last, keeping you engaged and excited to learn more.
+                  Most language courses feel like a chore. <span className="font-bold">Hamd</span> is different. We&apos;ve designed a <span className="font-bold">70-level journey</span> where each lesson builds on the last, keeping you engaged and excited to learn more.
                 </p>
                 <p className="text-xl text-gray-600 mb-8">
-                  Every lesson you complete <span className="font-bold">unlocks new words</span> in your personal <span className="font-bold">Vocabulary Bank</span>, making it impossible to forget what you've learned.
+                  Every lesson you complete <span className="font-bold">unlocks new words</span> in your personal <span className="font-bold">Vocabulary Bank</span>, making it impossible to forget what you&apos;ve learned.
                 </p>
                 <button
                   onClick={handleJoinNow}
@@ -121,10 +121,10 @@ export default function LandingPage() {
                 </div>
                 <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">20 Free Lessons – No Strings Attached</h2>
                 <p className="text-xl text-gray-600 mb-6">
-                  We believe in <span className="font-bold">showing</span> you how powerful our method is. That's why we're giving you <span className="font-bold">the first 20 lessons of our core curriculum and 5 extra lessons—completely free.</span>
+                  We believe in <span className="font-bold">showing</span> you how powerful our method is. That&apos;s why we&apos;re giving you <span className="font-bold">the first 20 lessons of our core curriculum and 5 extra lessons—completely free.</span>
                 </p>
                 <p className="text-xl text-gray-600 mb-8">
-                  By the time you finish these free lessons, you'll <span className="font-bold">already be thinking in Arabic</span>—and you won't want to stop.
+                  By the time you finish these free lessons, you&apos;ll <span className="font-bold">already be thinking in Arabic</span>—and you won&apos;t want to stop.
                 </p>
                 <button
                   onClick={handleJoinNow}
@@ -146,7 +146,7 @@ export default function LandingPage() {
                   <PiggyBank className="w-4 h-4" />
                   <span className="text-sm font-semibold">One-time Payment</span>
                 </div>
-                <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">The Best Price You'll Ever See – Forever</h2>
+                <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">The Best Price You&apos;ll Ever See – Forever</h2>
                 <p className="text-xl text-gray-600 mb-6">
                   Language learning platforms charge <span className="font-bold">monthly fees</span> that add up to hundreds over time. Not here.
                 </p>
@@ -225,7 +225,7 @@ export default function LandingPage() {
                 </div>
                 <h2 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">Designed for Real Progress</h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Memorizing random words won't make you fluent. That's why <span className="font-bold">Hamd</span> teaches you <span className="font-bold">the way native speakers learn</span>—step by step, with <span className="font-bold">real-world usage in mind.</span>
+                  Memorizing random words won&apos;t make you fluent. That&apos;s why <span className="font-bold">Hamd</span> teaches you <span className="font-bold">the way native speakers learn</span>—step by step, with <span className="font-bold">real-world usage in mind.</span>
                 </p>
                 <div className="space-y-6">
                   <div className="bg-cream-50 p-6 rounded-xl">
@@ -275,13 +275,13 @@ export default function LandingPage() {
                   <div className="bg-white p-6 rounded-xl shadow-lg">
                     <h4 className="text-xl font-bold mb-3 text-gray-900">One Year From Now</h4>
                     <p className="text-gray-600">
-                      Imagine looking back, realizing you could have been <span className="font-bold">speaking and understanding Arabic with ease</span>—but you didn't start.
+                      Imagine looking back, realizing you could have been <span className="font-bold">speaking and understanding Arabic with ease</span>—but you didn&apos;t start.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl shadow-lg">
                     <h4 className="text-xl font-bold mb-3 text-gray-900">The Alternative</h4>
                     <p className="text-gray-600">
-                      You took the first step today. You made Arabic a <span className="font-bold">part of your life</span>. And now, it's second nature.
+                      You took the first step today. You made Arabic a <span className="font-bold">part of your life</span>. And now, it&apos;s second nature.
                     </p>
                   </div>
                   <div className="bg-gold-100 p-6 rounded-xl">

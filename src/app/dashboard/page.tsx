@@ -50,7 +50,7 @@ export default function Dashboard() {
             <span className="text-2xl text-gold-600">MH</span>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900">Welcome back, {user?.displayName || 'Guest'}!</h2>
+            <h2 className="text-xl font-bold text-gray-900">Welcome back, {user?.displayName || "Guest"}!</h2>
             <p className="text-gray-600">Arabic Explorer</p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Dashboard() {
               ></div>
             </div>
             <p className="text-sm text-gray-600 mt-2">
-              You've completed {unlockedChapters}/{totalFreeChapters} chapters!
+              You{"'"}ve completed {unlockedChapters}/{totalFreeChapters} chapters!
             </p>
           </div>
           <Link 
@@ -128,7 +128,7 @@ export default function Dashboard() {
               </div>
             </div>
             <p className="text-sm text-gray-600">
-              {weeklyGoals.daysLeft} {weeklyGoals.daysLeft === 1 ? 'day' : 'days'} left to reach your goal
+              {weeklyGoals.daysLeft} {weeklyGoals.daysLeft === 1 ? "day" : "days"} left to reach your goal
             </p>
           </div>
         </div>
