@@ -3,6 +3,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  sendPasswordResetEmail
 } from "firebase/auth";
 import {
   collection,
@@ -11,6 +12,8 @@ import {
   doc,
   updateDoc,
   deleteDoc,
+  query,
+  where
 } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
@@ -18,12 +21,30 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 export const logoutUser = () => signOut(auth);
 
 export const signInWithGoogle = async () => {
-  const provider = new GoogleAuthProvider();
   try {
+    const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
     return result.user;
   } catch (error) {
-    console.error("Error signing in with Google", error);
+    console.error('Error signing in with Google:', error);
+    throw error;
+  }
+};
+
+export const signOutUser = async () => {
+  try {
+    await signOut(auth);
+  } catch (error) {
+    console.error('Error signing out:', error);
+    throw error;
+  }
+};
+
+export const resetUserPassword = async (email: string) => {
+  try {
+    await sendPasswordResetEmail(auth, email);
+  } catch (error) {
+    console.error('Error sending password reset email:', error);
     throw error;
   }
 };
