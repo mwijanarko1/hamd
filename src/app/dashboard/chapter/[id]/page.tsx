@@ -1,7 +1,6 @@
 'use client';
 
 import { useParams, useRouter } from 'next/navigation';
-import { levels, useLevels } from '../../journey/page';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, Lock, BookOpen, GraduationCap, ListChecks, CheckCircle2, XCircle } from 'lucide-react';
 import Link from 'next/link';
@@ -9,6 +8,7 @@ import { useState, useEffect } from 'react';
 import { useVocabulary } from '@/lib/hooks/useVocabulary';
 import { getChapterContent } from '@/app/lib/chapterUtils';
 import { ChapterContent, Category, Section, Example, Characteristic, Type, Tense, VocabularyWord, QuizQuestion } from '../types';
+import { useLevels } from '@/lib/contexts/LevelsContext';
 
 export default function ChapterPage() {
   const params = useParams();

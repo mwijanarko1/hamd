@@ -19,9 +19,17 @@ import { useCoins } from '../../lib/hooks/useCoins';
 import { useAchievements } from '../../lib/hooks/useAchievements';
 import { useWeeklyGoals } from '../../lib/hooks/useWeeklyGoals';
 import Link from 'next/link';
+import { levels } from '@/lib/data/levels';
 
-// Import levels data to calculate progress
-import { levels } from './journey/page';
+// Calculate unlocked chapters (non-premium only)
+const unlockedChapters = levels.filter(level => !level.isLocked && !level.isPremium).length;
+const totalFreeChapters = levels.filter(level => !level.isPremium).length; // Should be 20
+const progressPercentage = (unlockedChapters / totalFreeChapters) * 100;
+
+// Find the latest unlocked lesson
+const latestUnlockedLesson = levels
+  .filter(level => !level.isPremium)
+  .find(level => level.isLocked) || levels[0];
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -29,16 +37,6 @@ export default function Dashboard() {
   const coins = useCoins();
   const { latestAchievement } = useAchievements();
   const weeklyGoals = useWeeklyGoals();
-
-  // Calculate unlocked chapters (non-premium only)
-  const unlockedChapters = levels.filter(level => !level.isLocked && !level.isPremium).length;
-  const totalFreeChapters = levels.filter(level => !level.isPremium).length; // Should be 20
-  const progressPercentage = (unlockedChapters / totalFreeChapters) * 100;
-
-  // Find the latest unlocked lesson
-  const latestUnlockedLesson = levels
-    .filter(level => !level.isPremium)
-    .find(level => level.isLocked) || levels[0];
 
   return (
     <div className="px-8 pt-4 pb-8 space-y-8">

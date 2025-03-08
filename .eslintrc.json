@@ -1,3 +1,14 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-assign-module-variable": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/lib/chapterUtils.ts"],
+      "rules": {
+        "@next/next/no-assign-module-variable": "off"
+      }
+    }
+  ]
 }

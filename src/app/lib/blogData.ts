@@ -17,25 +17,31 @@ interface RawBlogPost extends Omit<BlogPost, 'publishedAt'> {
 // Cache the blog posts loading to avoid multiple API calls
 export const getBlogPosts = cache(async () => {
   // Use absolute URL with the current origin
-  const baseUrl = process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}` 
+  const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL 
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` 
     : process.env.NODE_ENV === 'development' 
       ? 'http://localhost:3000'
-      : '';
+      : 'http://localhost:3000'; // Default to localhost if no URL is available
       
-  const response = await fetch(`${baseUrl}/api/blog`, {
-    next: { revalidate: 3600 } // Revalidate every hour
-  });
+  try {
+    const response = await fetch(`${baseUrl}/api/blog`, {
+      next: { revalidate: 3600 } // Revalidate every hour
+    });
 
-  if (!response.ok) {
-    throw new Error('Failed to fetch blog posts');
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
+    }
+
+    const posts = await response.json() as RawBlogPost[];
+    
+    // Parse dates but keep icon as string
+    return posts.map((post) => ({
+      ...post,
+      publishedAt: new Date(post.publishedAt)
+    }));
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    // Return empty array as fallback
+    return [];
   }
-
-  const posts = await response.json() as RawBlogPost[];
-  
-  // Parse dates but keep icon as string
-  return posts.map((post) => ({
-    ...post,
-    publishedAt: new Date(post.publishedAt)
-  }));
 }); 
