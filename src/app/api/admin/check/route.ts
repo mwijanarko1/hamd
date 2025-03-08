@@ -1,13 +1,29 @@
+// Check if we're in build mode
+const isBuildTime = process.env.NODE_ENV === 'production' && process.env.NEXT_PHASE === 'phase-production-build';
+
+// Only import Firebase if not in build mode
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/firebase/firebase';
-import { doc, getDoc } from 'firebase/firestore';
 import { FirebaseError } from 'firebase/app';
+
+// Conditionally import Firebase modules
+let db: any;
+let doc: any;
+let getDoc: any;
+
+if (!isBuildTime) {
+  const firebaseImports = require('@/lib/firebase/firebase');
+  const firestoreImports = require('firebase/firestore');
+  db = firebaseImports.db;
+  doc = firestoreImports.doc;
+  getDoc = firestoreImports.getDoc;
+}
 
 const ADMIN_ID = 'hPdo7OkDnQXteFd6YvMp0kQSxlN2';
 
 export async function GET() {
   // During build time, return a mock response
-  if (process.env.NODE_ENV === 'production' && process.env.NEXT_PHASE === 'phase-production-build') {
+  if (isBuildTime) {
+    console.log('Build time detected - skipping Firebase initialization');
     return NextResponse.json({ 
       adminExists: false,
       adminData: null,
